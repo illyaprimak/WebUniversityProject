@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Main page</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <div class="spaced header">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 66">
+                    <path
+                        d="M28.85,58.14c.14-3.24.22-10.65.22-15.12V39.64c0-4-.08-6.2-.22-9.08L23,29.92V27.4l10.87-4.32,1.08.72-.22,9.72V43c0,4.47.07,11.88.22,15.12Zm11.09-2.52v2.52H23.38V55.62l7.92-1.44h1.44ZM27.05,10.4A4.48,4.48,0,0,1,31.8,5.87a4.54,4.54,0,1,1,0,9.07A4.53,4.53,0,0,1,27.05,10.4Z"
+                    />
+                    <path
+                        d="M35.28,51H30.23V48.27h5.82c6.27,0,8.72-3.85,8.72-9.48S42,29.73,35.84,29.73H30.23V27h6.58c8.47,0,12.81,4.86,12.81,11.79C49.62,45.43,45.69,51,35.28,51Z"
+                    />
+                    <rect fill="none" width="66" height="66" />
+                </svg>
+                <a href="index.html" class="text-logo">
+                    <span class="prominent">I</span>llya Primachenko
+                </a>
+                <div id="pages-selector" class="pages-selector">
+                    <button
+                        id="pages-selector-trigger"
+                        class="selector-trigger"
+                    >
+                        <div class="indicator">^</div>
+                        Pages
+                    </button>
+                    <div class="dropdown">
+                        <a href="index.html">Page 1</a>
+                        <a href="page2.html">Page 2</a>
+                        <a href="page3.html">Page 3</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="spaced">
+            <div class="page3">
+                <div>
+                    <h1>Lorem ipsum</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Veniam qui nihil magni itaque doloremque unde dolorem
+                        soluta nostrum aut. Blanditiis maiores aut illo esse
+                        voluptas corporis distinctio tempora laborum iure?
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="spaced footer">
+                <div>© Illya Primachenko 2021.</div>
+                <a href="https://google.com">External link</a>
+            </div>
+        </footer>
+    </body>
+
+    <script>
+        const trigger = document.getElementById("pages-selector-trigger")
+        const selector = document.getElementById("pages-selector")
+        let shown = false
+        trigger.addEventListener("click", () => {
+            shown = !shown
+            if (shown) {
+                selector.classList.add("shown")
+            } else {
+                selector.classList.remove("shown")
+            }
+        })
+    </script>
+</html>
